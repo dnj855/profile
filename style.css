@@ -4,10 +4,27 @@ body {
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background: #f3f3e0;
   color: #608bc1;
   font-size: 1em;
+  min-height: 100vh;
   line-height: 1.4em;
+  background: hsla(60, 44%, 92%, 1);
+  background: linear-gradient(
+    225deg,
+    hsla(60, 44%, 92%, 1) 35%,
+    hsla(213, 44%, 57%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    225deg,
+    hsla(60, 44%, 92%, 1) 35%,
+    hsla(213, 44%, 57%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    225deg,
+    hsla(60, 44%, 92%, 1) 35%,
+    hsla(213, 44%, 57%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F3F3E0", endColorstr="#608BC1", GradientType=1 );
 }
 
 .container {
@@ -21,7 +38,6 @@ body {
   background: #faffff;
   border-radius: 8px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  border: 0.5px solid rgb(235, 235, 235);
 }
 
 h1,
@@ -137,5 +153,28 @@ a:hover {
   h3 {
     line-height: 0.6em;
     margin-top: -10px;
+  }
+}
+
+i {
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+i:hover {
+  animation-name: bounce;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+    transform: scale(1.2);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
